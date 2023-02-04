@@ -1,0 +1,23 @@
+{
+	"manifest_version": 3,
+	"name": "Misc Ignore List",
+	"description": "An enhanced Ignore List for the Misc",
+	"version": "1.0.0",
+	"action": {
+		"default_icon": "img/bert128.png",
+		"default_popup": "index.html",
+		"default_title": "Click here to edit your Ignore List..."
+	},
+   "content_scripts": [
+     {
+         "matches": ["https://forum.bodybuilding.com/*"],
+         "js": ["js/content_script.js"]
+     }
+    ],
+	"permissions": ["clipboardWrite", "clipboardRead", "downloads", "storage"],
+	"icons": {
+		"128": "img/bert128.png",
+		"48": "img/bert48.png",
+		"16": "img/bert16.png"
+	}
+}
